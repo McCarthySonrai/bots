@@ -25,6 +25,7 @@ def run(ctx):
     ec2_resource = boto3.resource('ec2',region)
 
     # Verify instance exists
+    logging.info("Checking for instance in region: {}".format(region))
     instance_details = ec2_client.describe_instances(InstanceIds=[instance_id])
     
     # Stop EC2 instance.
