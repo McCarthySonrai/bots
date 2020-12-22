@@ -24,7 +24,7 @@ def run(ctx):
     ec2_client = boto3.client('ec2',region)
     ec2_resource = boto3.resource('ec2',region)
     sts_client = boto3.client('sts')
-    logging.info(sts_client.get_caller_identity()
+    logging.info(sts_client.get_caller_identity())
 
     # Verify instance exists
     logging.info("Checking for instance in region: {}".format(region))
