@@ -15,9 +15,13 @@ def run(ctx):
       .assert_type("instance") \
       .name
         
+    region = resource_id \
+      .assert_service("ec2") \
+      .assert_type("instance") \
+      .region
         
     # Create AWS identity and access management client
-    ec2_client = boto3.client('ec2')
+    ec2_client = boto3.client('ec2',region)
     ec2_resource = boto3.resource('ec2')
 
     # Verify instance exists
