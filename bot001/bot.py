@@ -22,7 +22,7 @@ def run(ctx):
         
     # Create AWS identity and access management client
     ec2_client = boto3.client('ec2',region)
-    ec2_resource = boto3.resource('ec2')
+    ec2_resource = boto3.resource('ec2',region)
 
     # Verify instance exists
     instance_details = ec2_client.describe_instances(InstanceIds=[instance_id])
