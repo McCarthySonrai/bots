@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 import logging
 import boto3
-#import sonrai.platform.aws.arn
+import sonrai.platform.aws.arn
 import json
 
 
