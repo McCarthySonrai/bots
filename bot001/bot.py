@@ -21,7 +21,7 @@ def run(ctx):
       .region
         
     # Create AWS identity and access management client
-    ec2_client = ctx.get_client.get('ec2',region)
+    ec2_client = ctx.get_client().get('ec2',region)
 
     # Verify instance exists
     logging.info("Checking for instance in region: {}".format(region))
